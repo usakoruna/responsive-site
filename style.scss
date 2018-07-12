@@ -1,0 +1,135 @@
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #F0FAFF;
+$subColor: #fdfcf6;
+$keyColor: #F1537C;
+$fontColor: #4c4c4c;
+
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em; 
+  background-color: $baseColor;
+  margin:0;
+}
+
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center;
+}
+
+
+/* Font
+------------------------------------------------------------*/
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.title{
+    font-size: 4.2rem;
+    color:$keyColor;
+}
+
+/* Header
+------------------------------------------------------------*/
+header{
+    #top{
+        height:250px;
+         background:{
+            image:url("./images/DSC_0393-1-min.jpg");
+            size:cover;
+            position:center center;
+            
+        }
+    }
+}
+// desktop
+@media(min-width:769px){
+ header{    
+    #top{
+        height:500px;
+    }
+ }
+}
+
+/* contents
+------------------------------------------------------------*/
+#main{
+    background-color:$baseColor;
+    padding: 40px 10px 80px;
+    .container{
+        width:90%;
+    } 
+    h2{
+         font-size: 2.5rem;
+    }
+    #container{
+        justify-content:space-between;
+        flex-direction:colum;
+    }
+    .contents-box{
+        margin:20px 0;
+        padding:20px;
+        background-color:$subColor;
+        box-sizing:border-box;
+    }
+}
+ // desktop
+ @media (min-width:769px){
+     #main{
+         #container{
+             display:flex;
+         }
+         .contents-box{
+             margin:0 10px;
+         }
+     }
+ }
+ footer{
+     background:{
+         color:#3295BE;
+         size:cover;
+         position:center center;
+     }
+     padding:70px;
+     h3{
+         margin:15px;
+     } 
+     a{
+         display:bolck;
+         text-decoration:none;
+     } 
+    .button{
+        border-radius:4px;
+        background-color:$keyColor;
+        padding:5px 0;
+        margin:auto;
+        width:180px;
+        color:white;
+    }     
+     }
+@media (min-width:769px){
+    footer{
+        a{
+        .button{    
+       &:hover{
+           background-color: darken($keyColor,10%);
+       }       
+    }
+  }
+ }   
+}
